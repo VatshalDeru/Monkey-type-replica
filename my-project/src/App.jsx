@@ -3,11 +3,17 @@ import './App.css'
 import Header from './components/Header'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [mainContent, setMainContent] = useState('')
+  console.log(mainContent)
+  
+  let handleSelectContent = (content) =>{
+    // console.log(content)
+    setMainContent(content)
+  }
 
   return (
     <div className="wrapper bg-[#323437] py-7 w-[80%] h-screen m-auto">
-      <Header></Header>
+      <Header handleSelectContent={handleSelectContent}></Header>
     </div>
   )
 }
