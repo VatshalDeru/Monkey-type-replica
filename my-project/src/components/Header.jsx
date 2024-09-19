@@ -44,7 +44,7 @@ const userIcons = [
     }
 ]
 
-export default function Header({handleSelectContent}){
+export default function Header({ handleSelectContent }){
 
     return(
         <header className="flex gap-4">
@@ -57,7 +57,7 @@ export default function Header({handleSelectContent}){
                     <ul className="flex gap-6 m-auto">
                         {menuIcons.map((item, index) =>{
                             return(
-                                <SVGIcon key={index} handleSelectContent={handleSelectContent} iconName={item.iconName}>
+                                <SVGIcon key={index} onClick={handleSelectContent} iconName={item.iconName}>
                                     {item.svg}
                                 </SVGIcon>
                             )
@@ -68,7 +68,7 @@ export default function Header({handleSelectContent}){
                     <ul className="flex gap-6 m-auto">
                         {userIcons.map((item, index) =>{
                             return(
-                                <SVGIcon key={index} handleSelectContent={handleSelectContent} iconName={item.iconName}>
+                                <SVGIcon key={index} onClick={handleSelectContent} iconName={item.iconName}>
                                     {item.svg}
                                 </SVGIcon>
                             )
