@@ -1,8 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    @apply appearance-none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    @apply appearance-none;
+  }
+}
+
 
 :root{
   font-family: "Roboto Mono", "Roboto Mono", Vazirmatn, monospace;
   background-color: #323437;
+}
+
+li,p,h1,h2{
+  user-select: none;
 }

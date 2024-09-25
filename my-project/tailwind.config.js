@@ -5,8 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      // Custom utility to remove the number input spinners
+      input: {
+        'number': {
+          '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
+            'appearance': 'none',
+            'margin': '0',
+          },
+          '&': {
+            '-moz-appearance': 'textfield',
+          },
+        },
+      },
+    },
   },
   plugins: [],
 }
-
