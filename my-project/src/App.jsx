@@ -60,6 +60,7 @@ function App() {
         selectedInterval = {selectedInterval}
       >
       </TypingModeBar>
+      <TypingBox time={selectedInterval[0]}></TypingBox>
       <ConfigModal ref={configModal} 
         selectedInterval={selectedInterval} 
         setInterval={setSelectedInterval} 
